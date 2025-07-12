@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container py-5">
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <span class="badge bg-primary-subtle text-primary mb-3 py-2 px-3 rounded-pill">Personal Diary App</span>
+            <h1 class="display-4 fw-bold mb-3">Capture Life's Moments</h1>
+            <p class="lead" style="color: #6c757d;">Your digital space for reflections, memories, and personal growth. Simple, secure, and designed just for you.</p>
+            <div class="d-flex gap-3 mt-4">
+                <a class="btn btn-primary btn-lg shadow-lg rounded-pill px-4 py-3" asp-controller="DiaryEntries" asp-action="Create">
+                    <i class="bi bi-plus-circle me-2"></i>New Entry
+                </a>
+                <a class="btn btn-outline-secondary btn-lg rounded-pill px-4 py-3" asp-controller="DiaryEntries" asp-action="Index">
+                    <i class="bi bi-journal-text me-2"></i>View Diary
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 text-center">
+            <div class="position-relative illustration-container">
+                <div class="text-primary" style="font-size: 120px;">
+                    <i class="bi bi-journal-richtext"></i>
+                </div>
+                
+                <div class="floating-card shadow-lg card-1 d-none d-md-block">
+                    <i class="bi bi-heart-fill text-danger me-2"></i> Your Personal Diary
+                </div>
+                <div class="floating-card shadow-lg card-2 d-none d-md-block">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i> Easy to Use
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center mb-5 mt-5 pt-3">
+        <span class="badge bg-primary-subtle text-primary mb-2 py-2 px-3 rounded-pill">Features</span>
+        <h2 class="display-6 fw-bold">Everything you need for your diary</h2>
+        <p style="color: #6c757d;" class="mx-auto col-md-8">Our platform combines simplicity with powerful features to make diary writing a joy.</p>
+    </div>
+    
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm hover-card rounded-4 overflow-hidden">
+                <div class="card-body text-center p-5">
+                    <div class="feature-icon-wrapper mb-4">
+                        <div class="feature-icon bg-primary text-white">
+                            <i class="bi bi-journal-richtext fs-2"></i>
+                        </div>
+                    </div>
+                    <h3 class="fw-bold">Write & Reflect</h3>
+                    <p style="color: #6c757d;">Document your daily experiences and reflect on your journey through life with our intuitive editor.</p>
+                    <a class="btn btn-outline-primary rounded-pill mt-3" asp-controller="DiaryEntries" asp-action="Create">
+                        <i class="bi bi-pencil me-2"></i>Start Writing
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm hover-card rounded-4 overflow-hidden">
+                <div class="card-body text-center p-5">
+                    <div class="feature-icon-wrapper mb-4">
+                        <div class="feature-icon bg-success text-white">
+                            <i class="bi bi-collection fs-2"></i>
+                        </div>
+                    </div>
+                    <h3 class="fw-bold">Organize Memories</h3>
+                    <p style="color: #6c757d;">Keep all your precious memories organized and easily accessible with tags and search.</p>
+                    <a class="btn btn-outline-success rounded-pill mt-3" asp-controller="DiaryEntries" asp-action="Index">
+                        <i class="bi bi-grid me-2"></i>View Entries
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm hover-card rounded-4 overflow-hidden">
+                <div class="card-body text-center p-5">
+                    <div class="feature-icon-wrapper mb-4">
+                        <div class="feature-icon bg-info text-white">
+                            <i class="bi bi-shield-check fs-2"></i>
+                        </div>
+                    </div>
+                    <h3 class="fw-bold">Private & Secure</h3>
+                    <p style="color: #6c757d;">Your thoughts stay private with our secure diary platform and end-to-end encryption.</p>
+                    <a class="btn btn-outline-info rounded-pill mt-3" asp-controller="Home" asp-action="Privacy">
+                        <i class="bi bi-shield me-2"></i>Privacy Policy
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center mt-5 p-5 bg-gradient-light rounded-4 shadow-sm border border-light">
+        <div class="px-lg-5 py-lg-3">
+            <h2 class="display-6 fw-bold">Ready to start your diary?</h2>
+            <p style="color: #6c757d;" class="lead col-md-8 mx-auto">Begin documenting your life's journey with our easy-to-use diary platform.</p>
+            <a class="btn btn-primary btn-lg mt-3 rounded-pill px-5 py-3 shadow" asp-controller="DiaryEntries" asp-action="Create">
+                <i class="bi bi-arrow-right-circle me-2"></i>Create Your First Entry
+            </a>
+        </div>
+    </div>
+</div>

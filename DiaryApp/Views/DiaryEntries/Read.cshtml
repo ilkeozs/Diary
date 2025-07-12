@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = Model.Title;
+}
+
+@model DiaryEntry
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white p-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="m-0">@Model.Title</h2>
+                        <span class="badge bg-light text-primary">
+                            <i class="bi bi-calendar me-1"></i> @Model.CreatedAt.ToString("MMM dd, yyyy")
+                        </span>
+                    </div>
+                </div>
+                <div class="card-body p-4">
+                    <div>
+                        @Model.Content
+                    </div>
+                    
+                    <hr class="my-4" />
+                    
+                    <div class="d-flex justify-content-start mt-3">
+                        <a asp-controller="DiaryEntries" asp-action="Index" class="btn btn-outline-secondary">
+                            <i class="bi bi-arrow-left me-2"></i> Back to List
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
